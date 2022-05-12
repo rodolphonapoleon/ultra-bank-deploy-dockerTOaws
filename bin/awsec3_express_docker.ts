@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import cdk = require('@aws-cdk/core');
-import { Awsec3ExpressDockerStack } from '../lib/awsec3_express_docker-stack';
+import "source-map-support/register";
+import cdk = require("@aws-cdk/core");
+import { UltraBankBackendDocker } from "../lib/awsec3_express_docker-stack";
 
 const app = new cdk.App();
-const envUSA = { account: '350776635962', region: 'us-east-1' };
+const envUSA = { account: "350776635962", region: "us-east-1" };
 
-new Awsec3ExpressDockerStack(app, 'Awsec3ExpressDockerStack',{env: envUSA} );
+new UltraBankBackendDocker(app, "UltraBankBackendDocker", { env: envUSA });
 app.synth();
