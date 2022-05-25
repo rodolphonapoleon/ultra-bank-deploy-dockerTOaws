@@ -3,7 +3,7 @@ import ec2 = require("@aws-cdk/aws-ec2");
 import ecs = require("@aws-cdk/aws-ecs");
 import elbv2 = require("@aws-cdk/aws-elasticloadbalancingv2");
 
-export class UltraBankBackend extends cdk.Stack {
+export class FUltraBankBackend extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -25,7 +25,7 @@ export class UltraBankBackend extends cdk.Stack {
 
     const helloContainer = helloTaskDefinition.addContainer("hello", {
       image: ecs.ContainerImage.fromRegistry(
-        "0508198705081987/test-bank-backend-e"
+        "0508198705081987/test-bank-backend-f"
       ),
       memoryLimitMiB: 128,
     });
