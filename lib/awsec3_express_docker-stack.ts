@@ -13,7 +13,7 @@ export class UltraBankBackend extends cdk.Stack {
     var cluster = new ecs.Cluster(this, "Cluster", { vpc });
     cluster.addCapacity("DefaultAutoScalingGroup", {
       instanceType: new ec2.InstanceType("t2.micro"),
-      maxCapacity: 3,
+      maxCapacity: 1,
     });
 
     // hello service
