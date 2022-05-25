@@ -3,7 +3,7 @@ import ec2 = require("@aws-cdk/aws-ec2");
 import ecs = require("@aws-cdk/aws-ecs");
 import elbv2 = require("@aws-cdk/aws-elasticloadbalancingv2");
 
-export class GUltraBankBackend extends cdk.Stack {
+export class GBUltraBankBackend extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
