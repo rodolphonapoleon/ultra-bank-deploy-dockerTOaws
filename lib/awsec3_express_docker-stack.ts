@@ -25,7 +25,7 @@ export class UltraBankBackend extends cdk.Stack {
 
     const helloContainer = helloTaskDefinition.addContainer("hello", {
       image: ecs.ContainerImage.fromRegistry(
-        "0508198705081987/test-bank-backend-a"
+        "0508198705081987/test-bank-backend-b"
       ),
       memoryLimitMiB: 128,
     });
